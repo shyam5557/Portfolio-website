@@ -30,12 +30,16 @@ let div = document.createElement("div");
 
 div.classList.add("project");
 
+let button = "";
+
+if(project.link){
+button = `<a href="${project.link}" target="_blank">View Project</a>`;
+}
+
 div.innerHTML = `
 <h3>${project.name}</h3>
 <p>${project.tech}</p>
-
-<a href="${project.link}"
-target="_blank">View Project</a>
+${button}
 `;
 
 container.appendChild(div);
